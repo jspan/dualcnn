@@ -46,7 +46,7 @@ def eval(test_model, sigma, gt_path, result_path):
             im_h_y[im_h_y < 0] = 0
             im_h_y[im_h_y > 255.] = 255.
             im_h_y = im_h_y[0, :, :]
-            cv2.imwrite(os.path.join(result_path, image_name), im_h_y)
+            cv2.imwrite(os.path.join(result_path, '{}.png'.format(image_name.split('.')[0])), im_h_y)
             count += 1
             print("{} images have proceeded!".format(count))
     calc_image_PSNR_SSIM(result_path, gt_path)
