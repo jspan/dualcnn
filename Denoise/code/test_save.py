@@ -54,7 +54,7 @@ def eval(test_model, sigma, gt_path, result_path):
 
 if __name__ == '__main__':
     sigma = 15
-    gt_path = "../dataset/BSDS500/test"
+    gt_path = "../datasets/BSDS500/test"
     result_path = './test_results/sigma_{}'.format(sigma)
     if not os.path.exists(result_path):
         os.makedirs(result_path)
