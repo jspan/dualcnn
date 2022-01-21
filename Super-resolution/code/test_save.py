@@ -46,8 +46,8 @@ def eval(model, test_set, save_path):
 
 if __name__ == '__main__':
     device = torch.device('cuda')
-    model = Dual_cnn(args).to(device)
     args.quickly_test = True
+    model = Dual_cnn(args).to(device)
     test_scale = 2
     weight = torch.load('../models_in_paper/Dual_CNN/Dual_CNN_x2.pt')
     model.load_state_dict(weight, strict=False)
